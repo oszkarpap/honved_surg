@@ -14,9 +14,9 @@ class DrawerItem {
 class HomePage extends StatefulWidget {
   static const String id = 'chat_screen';
   final drawerItems = [
-    new DrawerItem("SBAR", Icons.filter_1),
-    new DrawerItem("Kódolási Segédlet", Icons.filter_2),
-    new DrawerItem("Antibiotikum", Icons.filter_3)
+    new DrawerItem("SBAR", Icons.laptop_windows),
+    new DrawerItem("Kódolási Segédlet", Icons.laptop_chromebook),
+    new DrawerItem("Antibiotikum", Icons.laptop_windows)
   ];
 
   @override
@@ -53,9 +53,11 @@ class HomePageState extends State<HomePage> {
     for (var i = 0; i < widget.drawerItems.length; i++) {
       var d = widget.drawerItems[i];
       drawerOptions.add(new ListTile(
-
-        leading: new Icon(d.icon),
-        title: new Text(d.title),
+        leading: new Icon(d.icon, color: Colors.white),
+        title: new Text(
+          d.title,
+          style: new TextStyle(color: Colors.white),
+        ),
         selected: i == _selectedDrawerIndex,
         onTap: () => _onSelectItem(i),
       ));
@@ -70,16 +72,24 @@ class HomePageState extends State<HomePage> {
           "Sürgősségi Protokollok",
         ),
       ),
-      drawer: new Drawer(
-        child: new Column(
-          children: <Widget>[
-            new UserAccountsDrawerHeader(
-                accountName: new Text("Protokoll Lista"), accountEmail: null),
-            new Column(children: drawerOptions)
-          ],
-        ),
+      drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(child: Container(
+                height: 100,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: ExactAssetImage('images/logo.png'),
+                      fit: BoxFit.cover,
+                    )),
+              ),),
+              Column(children: drawerOptions,)],
+          )
       ),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
     );
   }
 }
+
+

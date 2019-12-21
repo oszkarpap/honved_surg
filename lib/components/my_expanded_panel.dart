@@ -19,7 +19,7 @@ class My_Expanded_Panel extends StatelessWidget {
           style: new TextStyle(
             fontSize: 20.0,
             fontWeight: FontWeight.w500,
-            color: Colors.black54,
+            color: Colors.green[900],
           ),
         ),
         collapsed: Text(
@@ -38,7 +38,5 @@ class My_Expanded_Panel extends StatelessWidget {
         hasIcon: true,
       ),
     );
-
-
   }
 }
