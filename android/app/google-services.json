@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "614035685682",
+    "firebase_url": "https://honvedsurgossegi.firebaseio.com",
+    "project_id": "honvedsurgossegi",
+    "storage_bucket": "honvedsurgossegi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:614035685682:android:999c24c9d429aa299e172b",
+        "android_client_info": {
+          "package_name": "com.oszkarpap.honved_surg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "614035685682-82qumr6aioqcoonha22hfjot7o0ipgdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBbTOqciOGvOzQa_Aq-5H1XePHuUpitLw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "614035685682-82qumr6aioqcoonha22hfjot7o0ipgdo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
