@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:honved_surg/bottom/bottom_main.dart';
 import 'package:honved_surg/screens/HomePage.dart';
 import 'package:honved_surg/screens/login_screen.dart';
 import 'package:honved_surg/screens/registration_screen.dart';
@@ -15,12 +16,13 @@ class HonvedSurg extends StatelessWidget {
           body1: TextStyle(color: Colors.black54),
         ),
       ),
-      initialRoute: HomePage.id,
+      initialRoute: WelcomeScreen.id,
       routes: {
         WelcomeScreen.id: (context) => WelcomeScreen(),
         LoginScreen.id: (context) => LoginScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
         HomePage.id: (context) => HomePage(),
+        BottomScreen.id: (context) => BottomScreen(),
       },
     );
   }

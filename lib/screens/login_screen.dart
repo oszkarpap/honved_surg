@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:honved_surg/bottom/bottom_main.dart';
 import 'package:honved_surg/components/rounded_button.dart';
 import 'package:honved_surg/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -72,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       email: email, password: password);
 
                   if (user != null) {
-                    Navigator.pushNamed(context, HomePage.id);
+                    Navigator.pushNamed(context, BottomScreen.id);
                   }
                 } catch (e) {
                   print(email + " " + password);

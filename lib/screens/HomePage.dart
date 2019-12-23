@@ -74,22 +74,24 @@ class HomePageState extends State<HomePage> {
       ),
       drawer: Drawer(
           child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(child: Container(
-                height: 100,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: ExactAssetImage('images/logo.png'),
-                      fit: BoxFit.cover,
-                    )),
-              ),),
-              Column(children: drawerOptions,)],
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          DrawerHeader(
+            child: Container(
+              height: 100,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                image: ExactAssetImage('images/logo.png'),
+                fit: BoxFit.cover,
+              )),
+            ),
+          ),
+          Column(
+            children: drawerOptions,
           )
-      ),
+        ],
+      )),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
     );
   }
 }
-
-
