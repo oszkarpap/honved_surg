@@ -1,8 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:honved_surg/fragments/first_fragment.dart';
+import 'package:honved_surg/fragments/fourth_fragment.dart';
 import 'package:honved_surg/fragments/second_fragment.dart';
 import 'package:honved_surg/fragments/third_fragment.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DrawerItem {
   String title;
@@ -14,9 +16,10 @@ class DrawerItem {
 class HomePage extends StatefulWidget {
   static const String id = 'chat_screen';
   final drawerItems = [
-    new DrawerItem("SBAR", Icons.laptop_windows),
-    new DrawerItem("Kódolási Segédlet", Icons.laptop_chromebook),
-    new DrawerItem("Antibiotikum", Icons.laptop_windows)
+    new DrawerItem("SBAR", MdiIcons.protocol),
+    new DrawerItem("Kódolási Segédlet", MdiIcons.protocol),
+    new DrawerItem("Antibiotikum", MdiIcons.protocol),
+    new DrawerItem("Mellkasi fájdalom", MdiIcons.protocol)
   ];
 
   @override
@@ -36,6 +39,8 @@ class HomePageState extends State<HomePage> {
         return new SecondFragment();
       case 2:
         return new ThirdFragment();
+      case 3:
+        return new FourthFragment();
 
       default:
         return new Text("Error");

@@ -5,6 +5,7 @@ import 'package:honved_surg/bottom//first_fragment.dart';
 import 'package:honved_surg/bottom//second_fragment.dart';
 import 'package:honved_surg/bottom//third_fragment.dart';
 import 'package:honved_surg/screens/HomePage.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class BottomScreen extends StatefulWidget {
   static const String id = 'bottom_screen';
@@ -40,19 +41,21 @@ class _BottomScreenState extends State<BottomScreen> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.white,
-        title:  TypewriterAnimatedTextKit(
-          text: ['Irányító pult'],
-          textAlign: TextAlign.center,
-          textStyle: TextStyle(
-            color: Colors.blue[900],
-            fontWeight: FontWeight.w400,
-          ),
+        title: Row(
+          children: <Widget>[
+            Image.asset('images/logo.png', height: 40,),
+            Text("  Sürgősségi Centrum",
+                style: TextStyle(
+                  color: Colors.green[900],
+                  fontWeight: FontWeight.w400,
+                )),
+          ],
         ),
         actions: <Widget>[
           IconButton(
               icon: Icon(
-                Icons.account_balance,
-                color: Colors.blue[900],
+                MdiIcons.protocol,
+                color: Colors.green[900],
               ),
               onPressed: () {
                 Navigator.pushNamed(context, HomePage.id);
@@ -61,11 +64,11 @@ class _BottomScreenState extends State<BottomScreen> {
       ),
       body: _getDrawerItemWidget(_selectedDrawerIndex),
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.blueGrey,
         items: <Widget>[
-          Icon(Icons.child_friendly, size: 30, color: Colors.blue[900]),
-          Icon(Icons.local_pharmacy, size: 30, color: Colors.blue[900]),
-          Icon(Icons.supervisor_account, color: Colors.blue[900]),
+          Icon(MdiIcons.calculator, size: 30, color: Colors.green[900]),
+          Icon(MdiIcons.medicalBag, size: 30, color: Colors.green[900]),
+          Icon(MdiIcons.ambulance, color: Colors.green[900]),
         ],
         onTap: (index) {
           setState(() {});
